@@ -11,8 +11,8 @@ class PlaceModel(db.Model):
     email_address = db.Column(db.String(30))
     placetype = db.Column(db.String(13))
 
-    destination_name = db.Column(db.String, db.ForeignKey('destinations.name'), nullable=False)
-    destination = db.relationship('DestinationModel')
+    destination_name = db.Column(db.String(80), db.ForeignKey('destinations.name'), nullable=False)
+   
 
     def __init__(self, name, bannerimg_url, abouttext, website_url, phone_number, email_address, placetype, destination_name):
         self.name = name
