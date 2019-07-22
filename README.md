@@ -1,6 +1,9 @@
 # Petasos API
 Petasos /peh· tuh· zowz/ is a bespoke, scalable Flask-RESTful microservice built to receive destination or place data requests from an authenticated client <mobile + web + hybrid + OS + Embedded> application and return appropriate response results pertinent to the client HTTP request method - DB data privately curated from destination cities & places of interest across the globe. 
 
+*PRIVATE DATASET FOR DATA ANALYSIS AND VISUALIZATION PROJECTS*
+
+
 API URL >_ https://petasosapi.herokuapp.com
 
 API Documentation >_ https://www.emekaegwim.com/petasos/index.html
