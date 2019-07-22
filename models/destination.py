@@ -4,7 +4,7 @@ class DestinationModel(db.Model):
     __tablename__ = 'destinations'
 
     
-    name = db.Column(db.String(80), primary_key=True)
+    name = db.Column(db.String(80), primary_key=True, unique=True)
     bannerimg_url = db.Column(db.String(140))
     time_url = db.Column(db.String(140))
     weather_url = db.Column(db.String(140))
@@ -13,7 +13,7 @@ class DestinationModel(db.Model):
 
 
 
-    places = db.relationship('PlaceModel', lazy='dynamic')
+    places = db.relationship('PlaceModel', lazy='dynamic', backref="destinations")
 
 
     def __init__(self, name, bannerimg_url, time_url, weather_url, currency, itu_countrycode):
