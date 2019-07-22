@@ -3,8 +3,8 @@ from db import db
 class DestinationModel(db.Model):
     __tablename__ = 'destinations'
 
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), db.ForeignKey('places.destination_name'))
+    
+    name = db.Column(db.String(80), primary_key=True)
     bannerimg_url = db.Column(db.String(140))
     time_url = db.Column(db.String(140))
     weather_url = db.Column(db.String(140))
