@@ -3,7 +3,7 @@ from db import db
 class PlaceModel(db.Model):
     __tablename__ = 'places'
 
-    name = db.Column(db.String(80), primary_key=True, unique=True)
+    name = db.Column(db.String(80), primary_key=True, unique=True, nullable=False)
     bannerimg_url = db.Column(db.String(140))
     abouttext = db.Column(db.String(200))
     website_url = db.Column(db.String(90))
