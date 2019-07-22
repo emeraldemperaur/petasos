@@ -8,16 +8,16 @@ from resources.place import Place, PlaceList
 from resources.destination import Destination, DestinationList, DestinationNameList
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://yniicmaipxgjns:bc4aa173b80e7d809907de6d63e7b259f989fb041d4e9f11ce42af4c9e66a69e@ec2-54-243-208-234.compute-1.amazonaws.com:5432/d32ai5ror9u530'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'chrome'
 api = Api(app)
 
 
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+#@app.before_first_request
+#def create_tables():
+#    db.create_all()
 
 
 
