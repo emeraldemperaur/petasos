@@ -10,7 +10,7 @@ from resources.place import Place, PlaceList
 from resources.destination import Destination, DestinationList, DestinationNameList
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://bc0956a1b3007f:4cc84b33@us-cdbr-iron-east-02.cleardb.net/heroku_b023cc8f673188f?reconnect=true'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://bc0956a1b3007f:4cc84b33@us-cdbr-iron-east-02.cleardb.net/heroku_b023cc8f673188f?reconnect=true'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'chrome'
 api = Api(app)
