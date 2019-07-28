@@ -5,7 +5,7 @@ class DestinationModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
-    bannerimg_url = db.Column(db.String(140))
+    bannerimg_url = db.Column(db.String(240))
     time_url = db.Column(db.String(140))
     weather_url = db.Column(db.String(140))
     currency = db.Column(db.String(4))
