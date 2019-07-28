@@ -13,8 +13,8 @@ class PlaceModel(db.Model):
     placetype = db.Column(db.String(13))
 
 
-    destination_id = db.Column(db.Integer)
-    destination_name = db.Column(db.String, db.ForeignKey('destinations.name'))
+    destination_id = db.Column(db.Integer, db.ForeignKey('destinations.id'))
+    destination_name = db.Column(db.String)
     destination = db.relationship('DestinationModel')
 
     def __init__(self, name, bannerimg_url, abouttext, website_url, phone_number, email_address, placetype, destination_id, destination_name):
