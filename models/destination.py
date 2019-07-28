@@ -26,7 +26,7 @@ class DestinationModel(db.Model):
 
 
     def json(self):
-        return {'name': self.name,'bannerimg_url': self.bannerimg_url ,'time_url': self.time_url,
+        return {'name': self.name, 'id': self.id,'bannerimg_url': self.bannerimg_url ,'time_url': self.time_url,
         'weather_url': self.weather_url,'currency': self.currency,'itu_countrycode': self.itu_countrycode,'places': [place.json() for place in self.places.all()]}
 
     def namelistjson(self):
