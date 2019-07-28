@@ -8,7 +8,7 @@ class DestinationModel(db.Model):
     bannerimg_url = db.Column(db.String(240))
     time_url = db.Column(db.String(140))
     weather_url = db.Column(db.String(140))
-    currency = db.Column(db.String(4))
+    currency = db.Column(db.String(7))
     itu_countrycode = db.Column(db.String(4))
 
 
