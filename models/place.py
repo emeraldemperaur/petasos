@@ -5,7 +5,7 @@ class PlaceModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
-    bannerimg_url = db.Column(db.String(140))
+    bannerimg_url = db.Column(db.String(240))
     abouttext = db.Column(db.String(200))
     website_url = db.Column(db.String(90))
     phone_number = db.Column(db.String(15))
