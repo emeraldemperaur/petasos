@@ -10,7 +10,7 @@ from resources.place import Place, PlaceList
 from resources.destination import Destination, DestinationList, DestinationNameList
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://qoowuiemtarbia:92f206ca7e91103309393d3e77334fc79e982e7675bb8737dce7be2233c1489d@ec2-174-129-227-51.compute-1.amazonaws.com:5432/dsgqc8pcup50e'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'chrome'
 api = Api(app)
