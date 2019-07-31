@@ -62,6 +62,26 @@ class Destination(Resource):
 
         return {'message': "The Petasos Destination '{}' was successfully deleted from the Hermes-Venus database!".format(name)}
 
+    
+    def put(self, name):
+        data = Destination.parser.parse_args()
+        destination = DestinationModel.find_by_name(name)
+
+
+        if destination is None:
+            return {'message': "There is currently no Petasos Destination named '{}' on the Hermes-Venus database!".format(name)}, 404
+        else:
+            destination.bannerimg_url = data['bannerimg_url']
+            destination.time_url = data['time_url']
+            destination.weather_url = data['weather_url']
+            destination.currency = data['currency']
+            destination.itu_countrycode = data['itu_countrycode']
+            
+            
+
+        destination.save_to_db()
+
+        return destination.json()
 
 
 
