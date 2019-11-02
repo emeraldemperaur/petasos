@@ -6,7 +6,7 @@ Petasos /peh· tuh· zowz/ is a bespoke, scalable Flask-RESTful microservice bui
 
 API URL >_ https://petasosapi.herokuapp.com
 
-API Documentation >_ https://www.emekaegwim.com/petasos/index.html
+API Documentation >_ https://www.emekaegwim.com/petasosapi/petasos.html
 
 ## API Endpoints
 
